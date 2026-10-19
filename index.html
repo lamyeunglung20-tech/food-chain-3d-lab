@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071e2d">
+  <meta name="description" content="Explore food chains in 3D: order organisms, identify producers and consumers, follow energy flow, and complete a quiz.">
+  <title>Food Chain 3D Lab</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./enhancements.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" id="brandLink" href="#" aria-label="Food Chain Lab home"><span class="brand-mark">✳</span><span><strong id="brandTitle">FOOD CHAIN</strong><small id="brandSubtitle">3D Ecology Lab</small></span></a>
+      <div class="top-right"><span class="eyebrow" id="headerEyebrow">INTERACTIVE SCIENCE</span><label class="language-picker" for="languageSelect"><span id="languageLabel">Language</span><select id="languageSelect" aria-label="Language"><option value="en">English</option><option value="zh">Chinese</option></select></label><button class="sound-toggle" id="soundToggle" type="button" aria-label="Turn on sound" aria-pressed="false">♪ <span>Sound off</span></button></div>
+    </header>
+
+    <main>
+      <div class="intro-row"><div><p class="section-kicker" id="heroKicker">FOLLOW THE FLOW OF ENERGY</p><h1 id="heroTitle">From one water plant to a <span>food chain</span></h1></div><div class="chapter-pill" id="chapterPill"><span class="dot"></span> 4 interactive stages <span class="pill-divider"></span> About 5 minutes</div></div>
+      <nav class="steps" aria-label="Learning progress" id="steps"></nav>
+
+      <div class="workspace">
+        <section class="scene-card" id="sceneCard" aria-label="3D food chain scene">
+          <div class="scene-topline"><span id="sceneTag">OCEAN ECOSYSTEM</span><span class="live-chip"><span></span> <span id="liveChipText">INTERACTIVE 3D</span></span></div>
+          <canvas id="scene" aria-label="Drag to rotate the 3D organisms"></canvas>
+          <div class="scene-fallback" id="sceneFallback" hidden>Your device cannot display the 3D scene. You can still complete every activity.</div>
+          <div class="scene-labels" id="sceneLabels" aria-hidden="true"></div>
+          <div class="scene-foot"><span id="dragHint">↔ Drag to rotate</span><span id="sceneHint">Choose the organisms to build the chain</span></div>
+        </section>
+
+        <section class="activity-card" aria-live="polite"><div class="activity-inner" id="activity"></div></section>
+      </div>
+      <div class="learning-note" id="learningNote"></div>
+    </main>
+    <footer id="footerText">FOOD CHAIN 3D LAB <span>·</span> Learn by observing, thinking and trying</footer>
+  </div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
